@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Buat - Artikel</title>
+</head>
+<body>
+    <h1>Buat Artikel</h1>
+    <form action="{{ route('news_store') }}" method="POST">
+        {{ csrfField() }}
+        <input type="text" name="judul" placeholder="Judul Artikel">
+        @if(flashMessages.has('errors.judul'))
+            <p> {{ flashMessages.get('errors.judul') }} </p>
+        @end
+        <input type="file" name="gambar" id="">
+        @if(flashMessages.has('errors.gambar'))
+            <p> {{ flashMessages.get('errors.gambar') }} </p>
+        @end
+        <textarea name="konten" id="" cols="30" rows="10" placeholder="Konten Artikel"></textarea>
+        @if(flashMessages.has('errors.konten'))
+            <p> {{ flashMessages.get('errors.konten') }} </p>
+        @end
+        <button type="submit">Buat</button>
+    </form>
+</body>
+</html>

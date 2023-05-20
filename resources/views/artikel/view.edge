@@ -8,5 +8,9 @@
 </head>
 <body>
     <h1>Nice News</h1>
+    {{-- Loop all articles --}}
+    @each(artikel in articles)
+      <h3>{{ artikel.judul }}</h3>
+    @end
 </body>
 </html>
