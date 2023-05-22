@@ -22,4 +22,14 @@ export default class ArtikelsController {
         });
         return response.redirect().back();
     }
+
+    public async edit({view, params}){
+        const {slug} = params;
+        const artikel = await Database.from("artikel").where("slug", slug).first();
+        return view.render("artikel/edit", {artikel});
+    }
+
+    public update(){
+
+    }
 }

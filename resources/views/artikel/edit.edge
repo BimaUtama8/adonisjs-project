@@ -4,13 +4,13 @@
 <section class="py-5 text-center container">
   <div class="row py-lg-5">
     <div class="col-lg-6 col-md-8 mx-auto">
-      <h1 class="fw-light">Buat Artikel</h1>
-      <form action="{{ route('news_store') }}" method="POST">
+      <form action="{{ route('news_update', [artikel.slug]) }}" method="POST">
+        <h1 class="fw-light">Edit Artikel Ini</h1>
         {{ csrfField() }}
         <div class="row mb-3">
           <label for="inputJudul1" class="col-sm-2 col-form-label">Judul</label>
           <div class="col-sm-10">
-            <input type="text" class="form-control" id="" name="judul">
+            <input type="text" class="form-control" id="" name="judul" value="{{ artikel.judul }}">
             @if(flashMessages.has('errors.judul'))
             <p> {{ flashMessages.get('errors.judul') }} </p>
             @end
@@ -19,14 +19,14 @@
         <div class="row mb-3">
           <label for="inputDeskripsi1" class="col-sm-2 col-form-label">Deskripsi</label>
           <div class="col-sm-10">
-            <textarea class="form-control" name="konten" id="" rows="3" placeholder="Deskripsi Artikel"></textarea>
+            <textarea class="form-control" name="konten" id="" rows="3" placeholder="Deskripsi Artikel">{{ artikel.konten }}</textarea>
             @if(flashMessages.has('errors.konten'))
             <p> {{ flashMessages.get('errors.konten') }} </p>
             @end
           </div>
         </div>
         <div class="row mb-3">
-          <label for="inputJudul1" class="col-sm-2 col-form-label">Gambar</label>
+          <label for="inputJudul1" class="col-sm-2 col-form-label">Upload</label>
           <div class="col-sm-10">
             <input type="file" class="form-control" id="" name="gambar">
             @if(flashMessages.has('errors.gambar'))
@@ -35,28 +35,10 @@
           </div>
         </div>
         <div class="d-grid gap-2">
-            <button type="submit" class="btn btn-primary">Buat</button>
+            <button type="submit" class="btn btn-primary">Update</button>
         </div>
       </form>
     </div>
   </div>
 </section>
-
-{{--  <h1>Buat Artikel</h1>
-<form action="{{ route('news_store') }}" method="POST">
-  {{ csrfField() }}
-  <input type="text" name="judul" placeholder="Judul Artikel">
-  @if(flashMessages.has('errors.judul'))
-  <p> {{ flashMessages.get('errors.judul') }} </p>
-  @end
-  <input type="file" name="gambar" id="">
-  @if(flashMessages.has('errors.gambar'))
-  <p> {{ flashMessages.get('errors.gambar') }} </p>
-  @end
-  <textarea name="konten" id="" cols="30" rows="10" placeholder="Konten Artikel"></textarea>
-  @if(flashMessages.has('errors.konten'))
-  <p> {{ flashMessages.get('errors.konten') }} </p>
-  @end
-  <button type="submit">Buat</button>
-</form>  --}}
 @end
