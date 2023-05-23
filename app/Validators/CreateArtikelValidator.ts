@@ -26,7 +26,7 @@ export default class CreateArtikelValidator {
   public schema = schema.create({
     judul:schema.string(),
     konten:schema.string(),
-    gambar:schema.string(),
+    gambar:schema.string.nullable(),
   })
 
   /**
