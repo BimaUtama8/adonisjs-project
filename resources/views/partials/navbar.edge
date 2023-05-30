@@ -9,9 +9,23 @@
           <li class="nav-item">
             <a class="nav-link" href="{{ route('news.index') }}">News</a>
           </li>
+          @if(auth.isLoggedIn)
           <li class="nav-item">
             <a class="nav-link" href="{{ route('news.create') }}">Create News</a>
           </li>
+          @end
+          @if(auth.isLoggedIn)
+          <form action="{{ route('auth.logout') }}" method="POST">
+            {{ csrfField() }}
+          <li class="nav-item">
+            <button type="submit" class="nav-link">Logout</button>
+          </li>
+          </form>
+          @else
+          <li class="nav-item">
+            <a class="nav-link" href="{{ route('auth.login') }}">Login</a>
+          </li>
+          @endif
         </ul>
       </div>
     </div>
