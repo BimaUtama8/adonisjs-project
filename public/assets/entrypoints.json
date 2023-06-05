@@ -1,0 +1,83 @@
+{
+  "entrypoints": {
+    "app": {
+      "js": [
+        "http://localhost:8080/assets/app.js"
+      ]
+    },
+    "style": {
+      "css": [
+        "http://localhost:8080/assets/style.css"
+      ],
+      "js": [
+        "http://localhost:8080/assets/style.js"
+      ]
+    },
+    "bootstrap-icons": {
+      "css": [
+        "http://localhost:8080/assets/bootstrap-icons.css"
+      ],
+      "js": [
+        "http://localhost:8080/assets/bootstrap-icons.js"
+      ]
+    },
+    "bootstrap": {
+      "css": [
+        "http://localhost:8080/assets/bootstrap.css"
+      ],
+      "js": [
+        "http://localhost:8080/assets/bootstrap.js"
+      ]
+    },
+    "boxicons": {
+      "css": [
+        "http://localhost:8080/assets/boxicons.css"
+      ],
+      "js": [
+        "http://localhost:8080/assets/boxicons.js"
+      ]
+    },
+    "quill-snow": {
+      "css": [
+        "http://localhost:8080/assets/quill-snow.css"
+      ],
+      "js": [
+        "http://localhost:8080/assets/quill-snow.js"
+      ]
+    },
+    "quill-buble": {
+      "css": [
+        "http://localhost:8080/assets/quill-buble.css"
+      ],
+      "js": [
+        "http://localhost:8080/assets/quill-buble.js"
+      ]
+    },
+    "remixicon": {
+      "css": [
+        "http://localhost:8080/assets/remixicon.css"
+      ],
+      "js": [
+        "http://localhost:8080/assets/remixicon.js"
+      ]
+    },
+    "simple-datatable": {
+      "css": [
+        "http://localhost:8080/assets/simple-datatable.css"
+      ],
+      "js": [
+        "http://localhost:8080/assets/simple-datatable.js"
+      ]
+    },
+    "quilljs": {
+      "js": [
+        "http://localhost:8080/assets/quilljs.js"
+      ]
+    },
+    "php-email-form": {
+      "js": [
+        "http://localhost:8080/assets/php-email-form.js"
+      ]
+    }
+  }
+}
