@@ -18,7 +18,7 @@ Route.on('/register').render('auth/register').as("auth.register");
 Route.post('/register', 'UsersController.store').as("register.store");
 
 //Dashboard
-Route.on('/dashboard').render("home/dashboard").as("home.dashboard");
+Route.on('/dashboard').render("home/dashboard").middleware('auth').as("home.dashboard");
 Route.resource("news", "ArtikelsController").paramFor('news', 'slug').middleware({
     edit: ['auth'],
     create: ['auth'],
